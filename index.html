@@ -19,6 +19,10 @@
         <link rel="stylesheet" href="/assets/script/styles.css">
     </head>
     <body>
+        <div class="buttonmenu">
+            <button class="menubutton" onclick="rewardsTab()">star</button>
+            <button class="menubutton" onclick="dataClear()">delete</button>
+        </div>
         <h1 class="main">Blueberry Task Manager</h1>
         <div class="xpbar">
             <div class="xplevel">0</div>
@@ -28,6 +32,30 @@
             <button class="addnewtask">Add new task...</button>
         </div>
         <img class="confetti" src="/assets/images/completion.gif" />
+        <div class="rewards">
+            <h1 class="rewardsmain">Rewards<span class="rewardstext"></span></h1>
+            <button class="menubutton closebutton" onclick="closeRewardsTab()">clear</button>
+            <hr class="rewarddivider">
+            <!--Reward 1-->
+            <span class="rewardstext"><b>Levelup Congratulator</b> - <i class="italicreward">Unlocked at level 2</i></span>
+            <div class="rewardbox" id="rewardsbox1">
+                <span class="rewardstext"><i>Custom TTS message for yourself upon leveling up!</i></span>
+                <br>
+                <span class="rewardstext"><input type="checkbox" id="reward1" class="rewardcheck" /><label for="reward1">Enable</label></span>
+                <br><br>
+                <span class="rewardstext"><b>Currently set to:</b> <span class="rewardstext" id="rewards1message">Congrats, you leveled up!</span> <a onclick="changeRewardOne()"><b>Change</b></a></span>
+            </div>
+            <br>
+            <!--Reward 2-->
+            <span class="rewardstext"><b>Task Congratulator</b> - <i class="italicreward">Unlocked at level 4</i></span>
+            <div class="rewardbox" id="rewardsbox2">
+                <span class="rewardstext"><i>Custom TTS message for yourself upon task completion!</i></span>
+                <br>
+                <span class="rewardstext"><input type="checkbox" id="reward2" class="rewardcheck" /><label for="reward2">Enable</label></span>
+                <br><br>
+                <span class="rewardstext"><b>Currently set to:</b> <span class="rewardstext" id="rewards2message">Congrats, you completed a task!</span> <a onclick="changeRewardTwo()"><b>Change</b></a></span>
+            </div>
+        </div>
         <div class="taskmodal">
             <form id="newtaskform">
                 <input class="taskname" id="taskname" placeholder="Task Name" type="text" required />
@@ -42,4 +70,5 @@
         </div>
     </body>
     <script src="/assets/script/script.js"></script>
+    <audio></audio>
 </html>
