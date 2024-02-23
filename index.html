@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+        <meta property="og:title" content="Blueberry" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="URL" />
+        <meta property="og:description" content="Blueberry - make everything a game!" />
+        <meta name="theme-color" content="00ff00">
+        <meta charset="UTF-8">
+        <meta name="description" content="Blueberry - make everything a game!">
+        <meta name="keywords" content="task, manager">
+        <link rel="icon" type="image/x-icon" href="Favicon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blueberry</title>
+        <link rel="stylesheet" href="/assets/script/styles.css">
+    </head>
+    <body>
+        <h1 class="main">Blueberry Task Manager</h1>
+        <div class="xpbar">
+            <div class="xplevel">0</div>
+            <div class="xpwidth"></div>
+        </div>
+        <div class="tasks">
+            <button class="addnewtask">Add new task...</button>
+        </div>
+        <img class="confetti" src="/assets/images/completion.gif" />
+        <div class="taskmodal">
+            <form id="newtaskform">
+                <input class="taskname" id="taskname" placeholder="Task Name" type="text" required />
+                <select class="taskpriority" id="taskpriority">
+                    <option value="50">Unimportant (50 xp)</option>
+                    <option value="75" selected>Normal (75 xp)</option>
+                    <option value="100">Important (100 xp)</option>
+                </select>
+                <button class="taskcancel" id="taskcancel">Cancel</button>
+                <button type="submit" class="taskcreate" id="taskcreate">Create</button>
+            </form>
+        </div>
+    </body>
+    <script src="/assets/script/script.js"></script>
+</html>

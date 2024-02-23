@@ -1,0 +1,189 @@
+body, html {
+    background: rgba(12, 19, 39);
+    margin: 0;
+    padding: 0;
+}
+* {
+    appearance: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Press Start 2p';
+    color: white;
+    margin: 30px;
+}
+p {
+    font-family: 'IBM Plex Mono';
+    color: black;
+    margin: 10px;
+    font-size: 18px;
+}
+span {
+    font-family: 'IBM Plex Mono';
+    color: black;
+    margin: 0;
+    font-size: 18px;
+}
+h1 {font-size: 35px}
+h2 {font-size: 30px}
+h3 {font-size: 25px}
+h4 {font-size: 20px}
+h5 {font-size: 15px}
+h6 {font-size: 10px}
+.xpbar {
+    margin: 30px;
+    background: black;
+    width: calc(100% - 60px);
+    border-radius: 10px;
+    outline: 3px solid rgba(0,175,0);
+    position: relative;
+}
+.xpwidth {
+    width: 0%;
+    height: 10px;
+    background: rgba(0,175,0);
+    transition: width 0.75s;
+}
+.xplevel {
+    position: absolute;
+    font-family: 'Press Start 2p';
+    color: rgba(0,255,0);
+    text-shadow: 2px 2px 3px black;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    top: -15px;
+}
+.main {
+    text-align: center;
+}
+.tasks {
+    border-radius: 15px;
+    margin: 30px;
+    width: calc(100% - 60px);
+    height: fit-content;
+    background: rgba(200,255,0);
+}
+.task {
+    border-bottom: 1px solid black;
+    padding: 15px;
+    transition: all 1s;
+}
+.addnewtask {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 15px;
+    font-family: 'IBM Plex Mono';
+    color: rgba(100,100,100);
+    margin: 0;
+    font-size: 18px;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    cursor: text;
+}
+.task:last-child {
+    border-bottom: none !important;
+}
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid black;
+    background: transparent;
+    margin-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0,0,0);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.checkbox:hover {
+    box-shadow: -2px 2px 0 rgba(100,100,100);
+    transform: translateX(2px) translateY(-2px);
+}
+.confetti {
+    aspect-ratio: 8 / 6;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+.taskmodal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    opacity: 0%;
+    transition: opacity 1s;
+}
+#newtaskform {
+    width: 100%;
+}
+.taskname {
+    width: calc(100% - 50px);
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    background: black;
+    border: 2px solid white;
+    border-radius: 40px;
+    font-family: 'IBM Plex Mono';
+    color: white;
+    cursor: text;
+}
+.taskname::placeholder {
+    color: rgba(100,100,100);
+    opacity: 1;
+  }
+.taskpriority {
+    width: calc(100% - 30px);
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    background: black;
+    border: 2px solid white;
+    border-radius: 40px;
+    font-family: 'IBM Plex Mono';
+    color: rgba(100,100,100);
+    cursor: text;
+}
+.taskname:focus, .taskpriority:focus {
+    outline: none;
+}
+.taskcreate {
+    background: rgba(0,100,0);
+    color: white;
+    font-family: 'Press Start 2p';
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    height: 40px;
+    margin-left: 10px;
+}
+.taskcancel {
+    background: rgba(100,0,0);
+    color: white;
+    font-family: 'Press Start 2p';
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    height: 40px;
+    margin-left: calc(30% - 10px);
+}
+.taskcreate, .taskcancel {
+    transition: transform 0.2s;
+}
+.taskcreate:hover, .taskcancel:hover {
+    transform: scale(1.05);
+}
+.taskcreate:active, .taskcancel:active {
+    transform: scale(0.95);
+}
+xpvalue {display:none}
